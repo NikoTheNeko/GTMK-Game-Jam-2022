@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GameManagerScript : MonoBehaviour{
+public class ThreeToOneBehavior : MonoBehaviour{
 
     #region Public Variables
-    [Header("Game Objects")]
 
-    [Tooltip("PlayerPiece that will move")]
-    public GameObject PlayerPiece;
-
-    [Tooltip("The Slider that will move the game piece")]
-    public Slider GamePieceSlider;
+    public DiceScript Dice1;
+    public DiceScript Dice2;
+    public DiceScript Dice3;
 
     #endregion
 
@@ -21,11 +17,13 @@ public class GameManagerScript : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        
+        Dice1.RollDice();
+        Dice2.RollDice();
+        Dice3.RollDice();
     }
 
     // Update is called once per frame
     void Update(){
-        
+      
     }
 }
